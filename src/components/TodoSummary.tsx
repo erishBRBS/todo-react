@@ -8,7 +8,7 @@ interface TodoSummaryProps {
 export default function TodoSummary({
 todos,
 deleteAllCompleted
-}: TodoSummaryProps) {
+}: Readonly<TodoSummaryProps>) {
     const completedTodos = todos.filter(todo => todo.completed);
 
     return(

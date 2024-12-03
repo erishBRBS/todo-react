@@ -4,7 +4,7 @@ interface AddTodoFormProps {
     onSubmit: (title:string) => void;
 }
 
-export default function AddTodoForm ({onSubmit}: AddTodoFormProps) {
+export default function AddTodoForm ({onSubmit}: Readonly<AddTodoFormProps>) {
     const [input, setInput] = useState("");
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
